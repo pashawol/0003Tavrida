@@ -12,17 +12,17 @@ block title
 block pagecontent 
 	//- +mob-mnu()
 	+top-nav() 
-		.col-auto
+		+e.mob-spacing.col-auto
 			+b.user-block--sm
 				.row.align-items-center
-					.col-sm-auto
+					.col-auto
 						img(src="img/@2x/thumb-9.jpg", alt="")
 
 					.col
 						.h5.fw-900.ttu Валентин 
 							div Олегов
 						.small Участник
-		.col-auto
+		+e.mob-spacing.col-auto
 			+e.link-download(href="#")
 				+icon("download")
 				| Скачать все
