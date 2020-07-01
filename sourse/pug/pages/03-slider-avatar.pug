@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+
+block variables
+	- let  mainPage= 'bg-black'
+block title
+	- let  title= 'слайдер'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+top-nav() 
+		.col-auto
+			+b.user-block--sm
+				.row.align-items-center
+					.col-sm-auto
+						img(src="img/@2x/thumb-9.jpg", alt="")
+
+					.col
+						.h5.fw-900.ttu Валентин 
+							div Олегов
+						.small Участник
+		.col-auto
+			+e.link-download(href="#")
+				+icon("download")
+				| Скачать все
+	+b.gal-section.flex-grow-1
+		.container
+			+e.slider--js.swiper-container
+				.swiper-wrapper#lightgallery
+					- for (var y = 1; y < 5; y++)
+						- for (var x = 1; x < 10; x++)
+							+e.slide.swiper-slide(  href=`img/@2x/thumb-9.jpg` ) 
+								+e.img-wrap
+									img(src=`img/@2x/thumb-9.jpg`, alt="")
+			+arrow()
+	+footer()
+	

@@ -1,0 +1,42 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+
+block variables
+	- let  mainPage= 'bg-black'
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+top-nav() 
+	+b.start-section
+		+e.container.container
+			.row.align-items-center
+				.col-lg-6
+					+b.user-block
+						.row.align-items-center
+							.col-sm-auto
+								img(src="img/@2x/thumb-9.jpg", alt="")
+
+							.col
+								.h1.fw-900 Валентин 
+									div Олегов
+								.small Участник
+					+b.control
+						.row
+							.col-sm-6.text-center
+								+e.btn.btn-danger(type="button") Это не я
+								.small.mb-4 Нажмите, поробуем еще раз
+							.col-sm-6.text-center
+								+e.btn.btn-primary(type="button") Это я
+								.small.mb-4 Найти все фотографии со мной
+						
+				.col-lg-6.d-none.d-lg-block
+					+thumbnails
+		.container
+			a.btn.btn-outline-primary(href="#") Все фото мероприятия
+	+footer()
+	
