@@ -8,7 +8,7 @@ function eventHandler() {
 		slidesPerColumn: 3,
 		slidesPerColumnFill: 'row',
 		watchOverflow: true,
-		// slidesPerGroup: 3,
+		// slidesPerGroup: 4,
 		spaceBetween: 30,
 		// loop: true,
 		navigation: {
@@ -17,7 +17,7 @@ function eventHandler() {
 		},
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 10,
+			loadPrevNextAmount: 28,
 		},
 		breakpoints: {
 			// when window width is >= 320px
