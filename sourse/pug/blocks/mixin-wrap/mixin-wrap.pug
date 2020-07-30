@@ -26,3 +26,40 @@ mixin thumbnails()
 	+b.thumbnails
 		- for (var x = 1; x < 14; x++)
 			img(src=`img/@2x/thumb-${x}.jpg`, alt="")
+
+mixin allGal()
+	+b.gal-section.flex-grow-1
+		.container#lightgallery 
+			- for (var y = 1; y < 4; y++)
+				- for (var x = 1; x < 10; x++)
+					+e.slide.swiper-slide(  href=`img/@2x/slide-${x}.jpg` ) 
+						+e.PICTURE.img-wrap.lazy
+							source(srcset="#" data-srcset=`img/@2x/webp/slide-${x}.webp` type="image/webp")
+							img(src="#" data-src=`img/@2x/slide-${x}.jpg`, alt="") 
+	.container.pagination
+		span.step-links
+			span.d-none.d-md-inline Страница: 
+			a(href='?page=2') ← Предыдущая 
+			| 
+			span.current
+				| 1 из 63. 
+			a(href='?page=2') Следующая →
+	+footer()
+mixin  Gal()
+	+b.gal-section.flex-grow-1
+		.container#lightgallery 
+			- for (var y = 1; y < 4; y++)
+				- for (var x = 1; x < 10; x++)
+					+e.slide.swiper-slide(  href=`img/@2x//thumb-9.jpg` ) 
+						+e.PICTURE.img-wrap.lazy
+							source(srcset="#" data-srcset=`img/@2x/webp//thumb-9.webp` type="image/webp")
+							img(src="#" data-src=`img/@2x//thumb-9.jpg`, alt="") 
+	.container.pagination
+		span.step-links
+			span.d-none.d-md-inline Страница: 
+			a(href='?page=2') ← Предыдущая 
+			| 
+			span.current
+				| 1 из 63. 
+			a(href='?page=2') Следующая →
+	+footer()

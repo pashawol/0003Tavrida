@@ -18,13 +18,5 @@ block bg
 block pagecontent 
 	//- +mob-mnu()
 	+top-nav('img/svg/logo-vostok.svg') 
-	+b.gal-section.flex-grow-1
-		.container#lightgallery 
-			- for (var y = 1; y < 5; y++)
-				- for (var x = 1; x < 10; x++)
-					+e.slide.swiper-slide(  href=`img/@2x/slide-${x}.jpg` ) 
-						+e.PICTURE.img-wrap.lazy
-							source(srcset="#" data-srcset=`img/@2x/webp/slide-${x}.webp` type="image/webp")
-							img(src="#" data-src=`img/@2x/slide-${x}.jpg`, alt="") 
-	+footer()
+	+allGal()
 	
