@@ -7,7 +7,7 @@ module.exports = () => {
 			$.cssnano(),
 			$.nested(),
 		];
-		return $.gulp.src($.sourse + '/sass/main.scss')
+		return $.gulp.src($.sourse + '/sass/*.scss')
 			.pipe($.sassGlob())
 			.pipe($.gp.sass().on("error", $.gp.notify.onError()))
 

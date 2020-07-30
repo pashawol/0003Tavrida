@@ -2,8 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
-		<!-- подключи тут--><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+		<title>Восток</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -25,22 +24,22 @@
 	</head>
 	<!-- подключи тут-->
 	<!--  стили темы-->
-	<link rel="stylesheet" href="css/tavrida.min.css">
+	<link rel="stylesheet" href="css/vostok.min.css">
 	<body class="bg-black"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper bg-wrap">
 			<!-- picture-->
 			<picture class="picture-bg"> 
-				<source srcset="img/@2x/webp/bg.webp" type="image/webp" media="(min-width:576px)"/>
-				<source srcset="img/@1x/webp/bg.webp" type="image/webp"/>
-				<source srcset="img/@2x/bg.jpg" type="image/jpg" media="(min-width:576px)"/>
-				<source srcset="img/@1x/bg.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/bg.jpg" alt=""/>
+				<source srcset="img/@2x/webp/bg-vostok.webp" type="image/webp" media="(min-width:576px)"/>
+				<source srcset="img/@1x/webp/bg-vostok.webp" type="image/webp"/>
+				<source srcset="img/@2x/bg-vostok.jpg" type="image/jpg" media="(min-width:576px)"/>
+				<source srcset="img/@1x/bg-vostok.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/bg-vostok.jpg" alt=""/>
 			</picture>
 			<!-- /picture-->
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-auto"><a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt=""/></a>
+						<div class="col-sm-auto"><a class="top-nav__logo" href="/"><img src="img/svg/logo-vostok.svg" alt=""/></a>
 						</div>
 						<div class="col-sm">
 							<ul>
@@ -58,39 +57,26 @@
 				<div class="start-section__container container">
 					<div class="row align-items-center">
 						<div class="col-lg-6">
-							<div class="user-block">
-								<div class="row align-items-center">
-									<div class="col-sm-auto"><img src="img/@2x/thumb-9.jpg" alt=""></div>
-									<div class="col">
-										<div class="h1 fw-900">Валентин 
-											<div>Олегов</div>
-										</div>
-										<div class="small">Участник</div>
-									</div>
-								</div>
+							<div class="start-section__title h1 fw-900">Для поиска фотографий с&nbsp;собой сделайете селфи или загрузите свою фотографию
 							</div>
 							<div class="control">
 								<div class="row">
-									<div class="col-sm-6 text-center">
-										<button class="control__btn btn-danger" type="button">Это не я
+									<div class="col-sm-6">
+										<button class="control__btn btn-primary" type="button">Сделать селфи
 										</button>
-										<div class="small mb-4">Нажмите, поробуем еще раз</div>
 									</div>
-									<div class="col-sm-6 text-center">
-										<button class="control__btn btn-primary" type="button">Это я
+									<div class="col-sm-6">
+										<button class="control__btn btn-primary" type="button">Загрузить фото
 										</button>
-										<div class="small mb-4">Найти все фотографии со мной</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 d-none d-lg-block">
-							<div class="thumbnails"><img src="img/@2x/thumb-1.jpg" alt=""/><img src="img/@2x/thumb-2.jpg" alt=""/><img src="img/@2x/thumb-3.jpg" alt=""/><img src="img/@2x/thumb-4.jpg" alt=""/><img src="img/@2x/thumb-5.jpg" alt=""/><img src="img/@2x/thumb-6.jpg" alt=""/><img src="img/@2x/thumb-7.jpg" alt=""/><img src="img/@2x/thumb-8.jpg" alt=""/><img src="img/@2x/thumb-9.jpg" alt=""/><img src="img/@2x/thumb-10.jpg" alt=""/><img src="img/@2x/thumb-11.jpg" alt=""/><img src="img/@2x/thumb-12.jpg" alt=""/><img src="img/@2x/thumb-13.jpg" alt=""/>
-							</div>
-						</div>
-					</div>
+					</div><img class="img-start d-none d-lg-block" src="img/svg/tiger.svg" alt="">
 				</div>
-				<div class="container"><a class="btn btn-outline-primary" href="#">Все фото мероприятия</a></div>
+				<div class="container">
+					<!-- поменял класс--><a class="btn btn-outline-light" href="#">Все фото мероприятия</a>
+				</div>
 			</div>
 			<footer class="footer block-with-lazy">
 				<div class="container">© 2020. Все права защищены</div>

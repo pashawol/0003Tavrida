@@ -18,14 +18,14 @@ mixin mob-mnu()
 			+mnu()
 			.text-right
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(i='img/svg/logo.svg') 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			.row
 				.col-sm-auto
 					+e.logo(href="/")
-						img(src="img/svg/logo.svg", alt="")
+						img(src= i, alt="")
 				.col-sm
 					ul
 						li: +e.link--current(href="#") Найти фото

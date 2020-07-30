@@ -5,10 +5,15 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
 
 block variables
+	// подключи тут
+	//  стили темы
+	link(rel="stylesheet", href="css/tavrida.min.css")
 	- let  mainPage= 'bg-black'
 block title
 	- let  title= 'title'
 	title= title
+	// подключи тут
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 block pagecontent 
 	//- +mob-mnu()
 	+top-nav() 

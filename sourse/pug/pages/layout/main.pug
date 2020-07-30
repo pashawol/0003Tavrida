@@ -43,7 +43,8 @@ html(lang="ru")
 	body(class= mainPage)
 		+ie11()
 		.main-wrapper.bg-wrap
-			+pic('bg','bg','')(class="picture-bg")
+			block bg
+				+pic('bg','bg','')(class="picture-bg")
 			block pagecontent
 				h3 content
 		//- +modal()

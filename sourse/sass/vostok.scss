@@ -1,0 +1,138 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon/app/assets/stylesheets/bourbon";
+// @import "../../node_modules/rfs/scss";
+
+@import "mixin";
+@import "fonts";
+@import "_sprite";
+// @import "bootstrap-theme/bootstrap";
+
+// Option B: Include parts of Bootstrap
+
+
+// v5
+
+// Layout & components
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "varsVostok";
+@import "vars";
+@import "./node_modules/bootstrap/scss/variables";
+
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "./node_modules/bootstrap/scss/root";
+@import "./node_modules/bootstrap/scss/reboot";
+@import "./node_modules/bootstrap/scss/type";
+// @import "./node_modules/bootstrap/scss/images";
+// @import "./node_modules/bootstrap/scss/containers";
+// @import "./node_modules/bootstrap/scss/grid";
+// @import "./node_modules/bootstrap/scss/tables";
+// @import "./node_modules/bootstrap/scss/forms";
+@import "./node_modules/bootstrap/scss/buttons";
+ 
+// @import "./node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "./node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+
+@import "root";
+@import "base";
+@import '../pug/blocks/**/*.scss';
+// @import "media"; // Всегда в конце
+
+
+.row{
+	// --bs-gutter-x: 40px;
+}
+
+
+.block{
+	width: 50px;
+	height: 100px;
+	background: url(../img/svg/sprite.svg#check);
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+	// background-size: contain;
+}
+
+.top-nav{
+	&__link{
+		font-size: rem(20);
+		border: none;
+	}
+}
+.top-nav__link--current,
+.top-nav__link:hover {
+	color: #92E7C2 !important;
+
+	border: none;
+}
+
+.bg-wrap>.picture-bg:before{
+	// display: none;
+}
+
+.btn{
+	// font-size: rem(20);
+	font-weight: 500;
+}
+.btn-outline-light{
+	color: #ffffff;
+}
+
+.control {
+	@include media-breakpoint-up(sm) {
+
+		max-width: rem(520);
+
+
+	}
+ 
+}
+
+
+.start-section{
+	&__container{
+		position: relative;
+		.img-start{
+			position: absolute;
+			left: 70%;
+			top: 0;
+		}
+	}
+}
+
+.user-block{
+	img{
+		border-radius: $border-radius;
+	}
+}
+
+.top-nav__link-download{
+	@extend .text-light;
+	@extend .h5;
+	font-weight: 500;
+	
+}
+
+.pagination {
+	// font-size: rem(24);
+		a {
+			@extend .text-light;
+		}
+}
+.bg-black{
+	background: #E5E5E5
+}
+.lg-actions .lg-next,
+.lg-actions .lg-prev
+.lg-toolbar .lg-icon,
+#lg-counter{
+	color: #ffffff;
+}

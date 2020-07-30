@@ -7,16 +7,17 @@ include ../blocks/sContact/_sContact.pug
 block variables
 	// подключи тут
 	//  стили темы
-	link(rel="stylesheet", href="css/tavrida.min.css")
+	link(rel="stylesheet", href="css/vostok.min.css")
 	- let  mainPage= 'bg-black'
 block title
-	- let  title= 'title'
+	- let  title= 'Восток'
 	title= title
-	// подключи тут
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+ 
+block bg
+	+pic('slider-bg','bg','')(class="picture-bg")
 block pagecontent 
 	//- +mob-mnu()
-	+top-nav() 
+	+top-nav('img/svg/logo-vostok.svg') 
 	+b.gal-section.flex-grow-1
 		.container#lightgallery 
 			- for (var y = 1; y < 5; y++)

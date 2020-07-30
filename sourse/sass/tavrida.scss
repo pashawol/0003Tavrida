@@ -1,0 +1,79 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon/app/assets/stylesheets/bourbon";
+// @import "../../node_modules/rfs/scss";
+
+@import "mixin";
+@import "fonts";
+@import "_sprite";
+// @import "bootstrap-theme/bootstrap";
+
+// Option B: Include parts of Bootstrap
+
+
+// v5
+
+// Layout & components
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "varsTavrida";
+@import "vars";
+@import "./node_modules/bootstrap/scss/variables";
+
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "./node_modules/bootstrap/scss/root";
+@import "./node_modules/bootstrap/scss/reboot";
+@import "./node_modules/bootstrap/scss/type";
+// @import "./node_modules/bootstrap/scss/images";
+// @import "./node_modules/bootstrap/scss/containers";
+// @import "./node_modules/bootstrap/scss/grid";
+// @import "./node_modules/bootstrap/scss/tables";
+// @import "./node_modules/bootstrap/scss/forms";
+@import "./node_modules/bootstrap/scss/buttons";
+ 
+// @import "./node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "./node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+
+@import "root";
+@import "base";
+@import '../pug/blocks/**/*.scss';
+// @import "media"; // Всегда в конце
+
+
+.row{
+	// --bs-gutter-x: 40px;
+}
+
+
+.block{
+	width: 50px;
+	height: 100px;
+	background: url(../img/svg/sprite.svg#check);
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+	// background-size: contain;
+}
+
+.bg-wrap {
+	position: relative;
+	z-index: 2;
+
+	&>.picture-bg {
+		&::before {
+			content: '';
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.65) 100%);
+			position: absolute;
+		}
+	}
+}
