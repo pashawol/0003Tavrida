@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+
+block variables
+	// подключи тут
+	//  стили темы
+	link(rel="stylesheet", href="css/eg.min.css")
+	- let  mainPage= 'bg-black'
+block title
+	- let  title= 'Евразия'
+	title= title
+ 
+block bg
+	+pic('bg-eg','bg','')(class="picture-bg")
+block pagecontent 
+	//- +mob-mnu()
+	+top-nav('img/svg/logo-eg.svg') 
+	+allGal()
+	

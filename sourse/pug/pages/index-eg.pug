@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+
+block variables
+	// подключи тут
+	//  стили темы
+	link(rel="stylesheet", href="css/eg.min.css")
+	- let  mainPage= 'bg-black'
+block title
+	- let  title= 'Евразия'
+	title= title
+ 
+block bg
+	+pic('bg-eg','bg','')(class="picture-bg")
+block pagecontent
+	//- +mob-mnu()
+	+top-nav('img/svg/logo-eg.svg') 
+	+b.start-section
+		+e.container.container
+			.row.align-items-center
+				.col-lg-6
+					+e.title.h1.fw-900 Для поиска фотографий с&nbsp;собой сделайете селфи или загрузите свою фотографию
+					+b.control
+						.row
+							.col-sm-6
+								+e.btn.btn-primary(type="button") Сделать селфи
+							.col-sm-6
+								+e.btn.btn-primary(type="button") Загрузить фото
+						
+				//- .col-lg-6.d-none.d-lg-block
+		+pic('main-right-img.png')(class="img-start-wrap d-none d-md-block")
+			//- img.img-start.d-none.d-lg-block(src="img/@2x", alt="")
+		.container
+			// поменял класс
+			a.btn.btn-outline-light(href="#") Все фото мероприятия
+	+footer()
+	
